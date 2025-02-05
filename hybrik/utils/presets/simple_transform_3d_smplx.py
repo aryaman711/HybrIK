@@ -15,7 +15,7 @@ from hybrik.models.layers.smplx.body_models import SMPLXLayer
 
 
 smplx_layer_neutral = SMPLXLayer(
-    model_path='model_files/smplx/SMPLX_NEUTRAL.npz',
+    model_path='SMPLX_NEUTRAL.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
