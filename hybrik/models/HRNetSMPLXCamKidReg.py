@@ -72,11 +72,11 @@ class HRNetSMPLXCamKidReg(nn.Module):
 
         self.smplx_layer = SMPLXLayer(
             # model_path='model_files/smpl_v1.1.0/smplx/SMPLX_NEUTRAL.npz',
-            model_path='model_files/smplx/SMPLX_NEUTRAL.npz',
+            model_path='SMPLX_NEUTRAL.npz',#corrected path
             num_betas=10,
             use_pca=False,
             age='kid',
-            kid_template_path='model_files/smplx_kid_template.npy',
+            kid_template_path='smplx_kid_template.npy',#corrected path
         )
 
         self.root_idx_smpl = 0
