@@ -23,7 +23,7 @@ smplx_layer_neutral = SMPLXLayer(
 )
 
 smplx_layer_female = SMPLXLayer(
-    model_path='model_files/smplx/SMPLX_FEMALE.npz',
+    model_path='SMPLX_FEMALE.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
@@ -31,7 +31,7 @@ smplx_layer_female = SMPLXLayer(
 )
 
 smplx_layer_male = SMPLXLayer(
-    model_path='model_files/smplx/SMPLX_MALE.npz',
+    model_path='SMPLX_MALE.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
