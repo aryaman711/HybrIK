@@ -24,7 +24,7 @@ DATASET:
 MODEL:
   TYPE: 'HRNetSMPLXCamKidReg'
   HR_PRETRAINED: './pose_hrnet_w48_256x192.pth'
-  PRETRAINED: './pretrained_models/hybrikx_rle_hrnet.pth'
+  PRETRAINED: './hybrikx_rle_hrnet.pth'
   TRY_LOAD: ''
   RESUME: ''
   FOCAL_LENGTH: 1000
