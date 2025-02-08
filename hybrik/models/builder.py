@@ -12,9 +12,12 @@ def build(cfg, registry, default_args=None):
         modules = [
             build_from_cfg(cfg_, registry, default_args) for cfg_ in cfg
         ]
+        print('cfg is list')
         return nn.Sequential(*modules)
     else:
+        print('cfg is not list')
         return build_from_cfg(cfg, registry, default_args)
+        
 
 
 def build_sppe(cfg):
