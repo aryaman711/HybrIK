@@ -139,7 +139,7 @@ opt = parser.parse_args()
 
 
 cfg_file = './configs/smplx/256x192_hrnet_rle_smplx_kid.yaml'
-CKPT = './pretrained_models/hybrikx_rle_hrnet.pth'
+CKPT = './hybrikx_rle_hrnet.pth'
 
 cfg = update_config(cfg_file)
 
