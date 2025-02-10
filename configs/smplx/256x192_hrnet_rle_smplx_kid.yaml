@@ -44,7 +44,6 @@ MODEL:
     PRESET: 'simple_smpl_3d_cam'
     DEPTH_DIM: 64
     HAND_REL: True
-    USE_KID: True  # Added this line from CHATGPT
   POST:
     NORM_TYPE: 'softmax'
   BBOX_3D_SHAPE:
