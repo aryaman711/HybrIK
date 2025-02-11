@@ -15,27 +15,27 @@ from hybrik.models.layers.smplx.body_models import SMPLXLayer
 
 
 smplx_layer_neutral = SMPLXLayer(
-    model_path='SMPLX_NEUTRAL.npz',#changed the path
+    model_path='model_files/smplx/SMPLX_NEUTRAL.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
-    kid_template_path='smplx_kid_template.npy',#changed the path
+    kid_template_path='model_files/smplx_kid_template.npy',#changed the path
 )
 
 smplx_layer_female = SMPLXLayer(
-    model_path='SMPLX_FEMALE.npz',#changed the path
+    model_path='model_files/smplx/SMPLX_FEMALE.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
-    kid_template_path='smplx_kid_template.npy',#changed the path
+    kid_template_path='model_files/smplx_kid_template.npy',#changed the path
 )
 
 smplx_layer_male = SMPLXLayer(
-    model_path='SMPLX_MALE.npz',#changed the path
+    model_path='model_files/smplx/SMPLX_MALE.npz',#changed the path
     num_betas=10,
     use_pca=False,
     age='kid',
-    kid_template_path='smplx_kid_template.npy',#changed the path
+    kid_template_path='model_files/smplx_kid_template.npy',#changed the path
 )
 
 
