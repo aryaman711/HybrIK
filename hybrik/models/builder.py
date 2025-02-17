@@ -4,6 +4,7 @@ from hybrik.utils import Registry, build_from_cfg
 
 
 SPPE = Registry('sppe')
+print(SPPE.module_dict)
 LOSS = Registry('loss')
 
 
