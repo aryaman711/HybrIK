@@ -125,6 +125,9 @@ for file in tqdm(files):
             bboxes=torch.from_numpy(np.array(bbox)).to(pose_input.device).unsqueeze(0).float(),
             img_center=torch.from_numpy(img_center).to(pose_input.device).unsqueeze(0).float()
         )
+        beta = pose_output.pred_shape.detach().cpu().numpy()  # Extract beta (shape parameters)
+        print(f"Beta for {file}: {beta}")  # Print beta for each image
+
         uv_29 = pose_output.pred_uvd_jts.reshape(29, 3)[:, :2]
         transl = pose_output.transl.detach()
 
