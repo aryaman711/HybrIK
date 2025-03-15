@@ -173,7 +173,3 @@ for file in tqdm(files):
         # Save the final visualization
         res_path = os.path.join(opt.out_dir, basename)
         cv2.imwrite(res_path, image_vis)
-
-        # Save the binary mask
-        mask_path = os.path.join(opt.out_dir, "binary_mask_" + basename)
-        cv2.imwrite(mask_path, valid_mask)
