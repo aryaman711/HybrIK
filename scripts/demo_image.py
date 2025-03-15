@@ -149,6 +149,14 @@ for file in tqdm(files):
             focal_length=focal, height=image.shape[0], width=image.shape[1])
 
         valid_mask_batch = (color_batch[:, :, :, [-1]] > 0)
+
+        # ---- 1. Save Binary Mask ----
+        binary_mask = (valid_mask_batch[0] * 255).cpu().numpy().astype(np.uint8)  # Convert to 8-bit image
+        binary_mask = binary_mask[:, :, 0]  # Safe way to remove the last channel instead of np.squeeze()
+        binary_mask_path = os.path.join(opt.out_dir, f"mask_{basename}")
+        cv2.imwrite(binary_mask_path, binary_mask)
+
+        # ---- 2. Rendered Image Visualization ----        
         image_vis_batch = color_batch[:, :, :, :3] * valid_mask_batch
         image_vis_batch = (image_vis_batch * 255).cpu().numpy()
 
@@ -162,5 +170,10 @@ for file in tqdm(files):
         image_vis = image_vis.astype(np.uint8)
         image_vis = cv2.cvtColor(image_vis, cv2.COLOR_RGB2BGR)
 
+        # Save the final visualization
         res_path = os.path.join(opt.out_dir, basename)
         cv2.imwrite(res_path, image_vis)
+
+        # Save the binary mask
+        mask_path = os.path.join(opt.out_dir, "binary_mask_" + basename)
+        cv2.imwrite(mask_path, valid_mask)
