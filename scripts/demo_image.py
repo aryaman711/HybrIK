@@ -128,7 +128,7 @@ for file in tqdm(files):
         beta = pose_output.pred_shape.detach().cpu().numpy()  # Extract beta (shape parameters)
         print(f"Beta for {file}: {beta}")  # Print beta for each image
 
-        uv_29 = pose_output.pred_uvd_jts.reshape(29, 3)[:, :2]
+        uv_29 = pose_output.pred_uvd_jts.reshape(29, 3)[:, :2] #no use
         transl = pose_output.transl.detach()
 
         # Visualization
